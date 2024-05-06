@@ -1,21 +1,20 @@
-# Ex.No: 4   Implementation of Alpha Beta Pruning 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+# Ex.No: 8  Logic Programming –  Medical Diagnosis Expert System
+### DATE: 02/03/24                                                                           
+### REGISTER NUMBER : 212221060048
 ### AIM: 
-Write a Alpha beta pruning algorithm to find the optimal value of MAX Player from the given graph.
-### Steps:
-1. Start the program
-2. Initially  assign MAX and MIN value as 1000 and -1000.
-3.  Define the minimax function  using alpha beta pruning
-4.  If maximum depth is reached then return the score value of leaf node. [depth taken as 3]
-5.  In Max player turn, assign the alpha value by finding the maximum value by calling the minmax function recursively.
-6.  In Min player turn, assign beta value by finding the minimum value by calling the minmax function recursively.
-7.  Specify the score value of leaf nodes and Call the minimax function.
-8.  Print the best value of Max player.
-9.  Stop the program. 
+Write a Prolog program to build a medical Diagnosis Expert System.
+###  Algorithm:
+1. Start the program.
+2. Write the rules for each diseases.
+3. If patient have mumps then symptoms are fever and swollen glands.
+4. If patient have cough, sneeze and running nose then disease is measles.
+5. if patient have symptoms headache ,sneezing ,sore_throat, runny_nose and  chills then disease is common cold.
+6. Define rules for all disease.
+7. Call the predicates and Collect the symptoms of Patient and give the hypothesis of disease.
+        
 
 ### Program:
-
+symptom(Patient,fever), symptom(Patient,headache), symptom(Patient,runny_nose), symptom(Patient,rash). hypothesis(Patient,flu) :- symptom(Patient,fever), symptom(Patient,headache), symptom(Patient,body_ache), symptom(Patient,conjunctivitis), symptom(Patient,chills), symptom(Patient,sore_throat), symptom(Patient,runny_nose), symptom(Patient,cough). hypothesis(Patient,common_cold) :- symptom(Patient,headache), symptom(Patient,sneezing), symptom(Patient,sore_throat). hypothesis(Patient,chicken_pox) :- symptom(Patient,fever), symptom(Patient,chills), symptom(Patient,body_ache), symptom(Patient,rash). hypothesis(Patient,measles) :- symptom(Patient,cough), symptom(Patient,sneezing), symptom(Patient,runny_nose). symptom(raju,headache). symptom(raju,sneezing). symptom(raju,sore_throat).
 
 
 
@@ -27,8 +26,9 @@ Write a Alpha beta pruning algorithm to find the optimal value of MAX Player fro
 
 
 ### Output:
+![image](https://github.com/KarthikeyanJ118/AI_Lab_2023-24/assets/160995906/49b86f6a-284e-481a-8467-4c69de3a1718)
 
 
 
 ### Result:
-Thus the best score of max player was found using Alpha Beta Pruning.
+Thus the simple medical diagnosis system was built sucessfully.
